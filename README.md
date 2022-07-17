@@ -202,9 +202,9 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 # 更新日志
 
 ```
-2.7.1
-不同钱包相同名称的机器现在分开展示了
+3.0.0
 增加了KENC端口的自定义RSA密钥(此功能仅适用于自己制作客户端, 平时不要配置, 否则会导致kenc端口无法正常连接)
+不同钱包相同名称的机器现在分开展示了
 
 2.7.0
 修复了KASPA无效过高的问题
