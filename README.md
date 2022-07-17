@@ -517,7 +517,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 <span id="_kenc"></span>
 # KENC
 <p>
-请前往<a href="https://github.com/tiancao2022/LXMinerProxy/tree/main/KENC">https://github.com/tiancao2022/LXMinerProxy/tree/main/KENC</a>自行下载
+请前往<a href="https://github.com/tiancao2022/LXMinerProxy/tree/master/KENC">https://github.com/tiancao2022/LXMinerProxy/tree/master/KENC</a>自行下载
 </p>
 <p><a href="#kenc">KENC帮助文档</a></p>
 
