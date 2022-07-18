@@ -8,9 +8,9 @@ DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/Linux-64"
 
 DOWNLOAD_STANDBY="https://cdn.jsdelivr.net/gh/tiancao2022/LXMinerProxy@master/Linux-64"
 
-PATH_KT="/root/lxmproxy"
+PATH_LX="/root/lxmproxy"
 
-PATH_EXEC="ktproxy"
+PATH_EXEC="lxproxy"
 
 PATH_CACHE="/root/lxmproxy/.cache"
 
@@ -23,7 +23,7 @@ PATH_ERR="/root/lxmproxy/err.log"
 
 
 PATH_TURN_ON="/etc/profile.d"
-PATH_TURN_ON_SH="/etc/profile.d/ktm.sh"
+PATH_TURN_ON_SH="/etc/profile.d/LXm.sh"
 
 ISSUE() {
     echo "1.0.0"
@@ -107,7 +107,7 @@ setConfig() {
 
         chmod -R 777 $PATH_CONFIG
 
-        echo "KT_START_PORT=16777" >> $PATH_CONFIG
+        echo "LX_START_PORT=16777" >> $PATH_CONFIG
     fi
 
     TARGET_VALUE="$1=$2"
@@ -172,7 +172,7 @@ stop() {
 uninstall() {    
     stop
 
-    rm -rf ${PATH_KT}
+    rm -rf ${PATH_LX}
 
     turn_off
 
@@ -187,17 +187,17 @@ start() {
         return
     else
         # 要先cd进去 否则nohup日志会产生在当前路径
-        cd $PATH_KT
+        cd $PATH_LX
         filterResult $? "打开目录"
 
         clearlog
 
-        nohup "${PATH_KT}/${PATH_EXEC}" 2>err.log &
-        # nohup "${PATH_KT}/${PATH_EXEC}" >/dev/null 2>log &
+        nohup "${PATH_LX}/${PATH_EXEC}" 2>err.log &
+        # nohup "${PATH_LX}/${PATH_EXEC}" >/dev/null 2>log &
         filterResult $? "启动程序"
 
-        # getConfig "KT_START_PORT"
-        port=$(getConfig "KT_START_PORT")
+        # getConfig "LX_START_PORT"
+        port=$(getConfig "LX_START_PORT")
 
         colorEcho $GREEN "|----------------------------------------------------------------|"
         colorEcho $GREEN "程序启动成功, WEB访问端口${port}, 默认账号admin, 默认密码admin123。"
@@ -218,20 +218,20 @@ turn_on() {
 
         touch $PATH_TURN_ON_SH
 
-        chmod 777 -R $PATH_KT
+        chmod 777 -R $PATH_LX
         chmod 777 -R $PATH_TURN_ON
 
         echo 'COUNT=$(ps -ef |grep '$PATH_EXEC' |grep -v "grep" |wc -l)' >> $PATH_TURN_ON_SH
 
         echo 'if [ $COUNT -eq 0 ] && [ $(id -u) -eq 0 ]; then' >> $PATH_TURN_ON_SH
-        echo "  cd ${PATH_KT}" >> $PATH_TURN_ON_SH
-        echo "  nohup "${PATH_KT}/${PATH_EXEC}" 2>err.log &" >> $PATH_TURN_ON_SH
-        echo '  echo "KTProxy已启动"' >> $PATH_TURN_ON_SH
+        echo "  cd ${PATH_LX}" >> $PATH_TURN_ON_SH
+        echo "  nohup "${PATH_LX}/${PATH_EXEC}" 2>err.log &" >> $PATH_TURN_ON_SH
+        echo '  echo "lxproxy已启动"' >> $PATH_TURN_ON_SH
         echo 'else' >> $PATH_TURN_ON_SH
         echo '  if [ $COUNT -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "KTProxy已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
+        echo '      echo "lxproxy已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
         echo '  elif [ $(id -u) -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "使用ROOT用户登录才能启动KTPROXY"' >> $PATH_TURN_ON_SH
+        echo '      echo "使用ROOT用户登录才能启动lxproxy"' >> $PATH_TURN_ON_SH
         echo '  fi' >> $PATH_TURN_ON_SH
         echo 'fi' >> $PATH_TURN_ON_SH
 
@@ -251,7 +251,7 @@ installapp() {
         VERSION="$1"
     fi
     
-    colorEcho ${GREEN} "开始安装KTPROXY-V-${VERSION}"
+    colorEcho ${GREEN} "开始安装lxproxy-V-${VERSION}"
 
     if [[ `command -v yum` ]];then
         colorEcho ${BLUE} "关闭防火墙"
@@ -298,7 +298,7 @@ installapp() {
         return
     fi
 
-    checkProcess "ktproxy"
+    checkProcess "lxproxy"
     if [ $? -eq 1 ]; then
         colorEcho ${RED} "发现正在运行的LXMinerProxy, 需要停止才可继续安装。"
         colorEcho ${YELLOW} "输入1停止正在运行的LXMinerProxy并且继续安装, 输入2取消安装。"
@@ -321,9 +321,9 @@ installapp() {
 
     colorEcho $BLUE "创建目录"
     
-    if [[ ! -d $PATH_KT ]];then
-        mkdir $PATH_KT
-        chmod 777 -R $PATH_KT
+    if [[ ! -d $PATH_LX ]];then
+        mkdir $PATH_LX
+        chmod 777 -R $PATH_LX
     else
         colorEcho $YELLOW "目录已存在, 无需重复创建, 继续执行安装。"
     fi
@@ -337,16 +337,16 @@ installapp() {
     fi
 
     if [[ ! -f $PATH_CONFIG ]];then
-        setConfig KT_START_PORT $((RANDOM%65535+1))
+        setConfig LX_START_PORT $((RANDOM%65535+1))
     fi
 
     colorEcho $BLUE "拉取程序"
-    # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_KT "${DOWNLOAD_HOST}/ktproxy_v${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
+    # wget -P $PATH_LX "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
+    wget -P $PATH_LX "${DOWNLOAD_HOST}/lxproxy_v${VERSION}_linux" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
 
-    filterResult $? "拉取程序 ktproxy_v${VERSION}_linux"
+    filterResult $? "拉取程序 lxproxy_v${VERSION}_linux"
 
-    chmod 777 -R "${PATH_KT}/${PATH_EXEC}"
+    chmod 777 -R "${PATH_LX}/${PATH_EXEC}"
 
     turn_on
 
@@ -396,14 +396,14 @@ check_limit() {
 }
 
 check_hub() {
-    # cd $PATH_KT
+    # cd $PATH_LX
     colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/ktmproxy/nohup.out
+    tail -f /root/LXmproxy/nohup.out
 }
 
 check_err() {
     colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/ktmproxy/err.log
+    tail -f /root/LXmproxy/err.log
 }
 
 install_target() {
@@ -425,7 +425,7 @@ restart() {
 set_port() {
     read -p "$(echo -e "请输入要设置的端口号：")" choose
 
-    setConfig KT_START_PORT $choose
+    setConfig LX_START_PORT $choose
 
     stop
 
@@ -443,7 +443,7 @@ resetpass() {
 }
 
 lookport() {
-    port=$(getConfig "KT_START_PORT")
+    port=$(getConfig "LX_START_PORT")
 
     colorEcho $GREEN "当前WEB访问端口${port}"
 }
