@@ -2,7 +2,7 @@
 # Author: tiancao2022
 # github: https://github.com/tiancao2022
 
-VERSION="2.7.1"
+VERSION="3.0.1"
 
 DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/Linux-64"
 
@@ -209,7 +209,7 @@ start() {
 update() {
     turn_off
 
-    installapp 2.7.1
+    installapp 3.0.1
 }
 
 turn_on() {
@@ -478,7 +478,7 @@ read -p "$(echo -e "请选择[1-14]：")" choose
 
 case $choose in
 1)
-    installapp 2.7.1
+    installapp 3.0.1
     ;;
 2)
     update
