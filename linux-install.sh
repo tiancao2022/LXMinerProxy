@@ -164,7 +164,7 @@ clearlog() {
 }
 
 stop() {
-    colorEcho $BLUE "终止KTMinerProxy进程"
+    colorEcho $BLUE "终止LXMinerProxy进程"
     killall lxproxy
     sleep 1
 }
@@ -300,8 +300,8 @@ installapp() {
 
     checkProcess "ktproxy"
     if [ $? -eq 1 ]; then
-        colorEcho ${RED} "发现正在运行的KTMinerProxy, 需要停止才可继续安装。"
-        colorEcho ${YELLOW} "输入1停止正在运行的KTMinerProxy并且继续安装, 输入2取消安装。"
+        colorEcho ${RED} "发现正在运行的LXMinerProxy, 需要停止才可继续安装。"
+        colorEcho ${YELLOW} "输入1停止正在运行的LXMinerProxy并且继续安装, 输入2取消安装。"
 
         read -p "$(echo -e "请选择[1-2]：")" choose
         case $choose in
