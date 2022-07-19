@@ -2,7 +2,7 @@
 # Author: tiancao2022
 # github: https://github.com/tiancao2022
 
-VERSION="3.0.1"
+VERSION="3.0.2"
 
 DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/Linux-64"
 
@@ -28,6 +28,7 @@ PATH_TURN_ON_SH="/etc/profile.d/LXm.sh"
 ISSUE() {
     echo "2.7.1"
     echo "3.0.1"
+    echo "3.0.2"
 }
 
 colorEcho(){
@@ -164,7 +165,7 @@ start() {
 update() {
     turn_off
 
-    installapp 3.0.1
+    installapp 3.0.2
 }
 
 turn_on() {
@@ -433,7 +434,7 @@ read -p "$(echo -e "请选择[1-14]：")" choose
 
 case $choose in
 1)
-    installapp 3.0.1
+    installapp 3.0.2
     ;;
 2)
     update
