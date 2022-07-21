@@ -14,7 +14,7 @@
 
 <h3>
     Telegram：<a href="https://t.me/+R5CwxedobOoxZTQ1">https://t.me/+R5CwxedobOoxZTQ1</a>
-    Github：<a href="https://github.com/tiancao2022/LXMinerProxy">https://github.com/tiancao2022/LXMinerProxy</a>
+    <p>Github：https://github.com/tiancao2022/LXMinerProxy<p>
 </h3>
 
 </div>
