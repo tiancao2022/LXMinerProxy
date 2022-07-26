@@ -203,6 +203,11 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 # 更新日志
 
 ```
+3.2.1
+重要更新，全面优化管理界面
+优化使用体验
+解决客户端程序断连问题
+
 3.1.1
 优化了设备详细信息的日志
 优化了登录界面
