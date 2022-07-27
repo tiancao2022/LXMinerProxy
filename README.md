@@ -13,7 +13,7 @@
 [![Issues][issues-shield]][issues-url]
 
 <h3>
-    Telegram：<a href="https://t.me/+R5CwxedobOoxZTQ1">https://t.me/+R5CwxedobOoxZTQ1</a>
+    Telegram：<a href="https://t.me/+R5CwxedobOoxZTQ1">https://t.me/+R5CwxedobOoxZTQ1</a> QQ：<a href=2033638252"">https://t.me/+R5CwxedobOoxZTQ1</a>
     <p>Github：https://github.com/tiancao2022/LXMinerProxy<p>
 </h3>
 
