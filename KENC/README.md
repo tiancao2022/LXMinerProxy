@@ -12,6 +12,17 @@
 
 <a href="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_vcu-firs-1.0.linux">点击下载LINUX客户端</a>
 
+### KENC LINUX系统下安装脚本
+```
+root用户直接执行以下命令, 根据提示选择对应功能即可。
+bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/master/kenc.sh)
+默认端口为3101
+```
+###WIN系统下载
+```
+WIN系统请直接下载kenc_v_windows 主程序kenc-electron.exe .zip安装包
+win系统版本kenc 主程序为“kenc-electron.exe”
+```
 ### 使用环境
 ```
 LXMinerproxy版本>=2.1.0
