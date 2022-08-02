@@ -8,9 +8,9 @@
 
 ### KENC是本地->远程LX隧道，局域网部署在一台设备上即可，可与远程LXMinerProxy通过KENC协议进行通信。
 
-<a href="https://github.com/tiancao2022/LXMinerProxy/raw/main/KENC/windows.zip">点击下载WINDOWS客户端</a>
+<a href="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/windows.zip">点击下载WINDOWS客户端</a>
 
-<a href="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_vcu-firs-1.0">点击下载LINUX客户端</a>
+<a href="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_vcu-firs-1.0.linux">点击下载LINUX客户端</a>
 
 ### 使用环境
 ```
