@@ -31,7 +31,7 @@
   </p>
 
 <h2>Linux一键工具箱</h2>
-<p>root用户直接执行以下命令, 根据提示选择对应功能即可。</p>
+<p>root用户直接执行以下命令, 根据提示选择对应功能即可。默认帐号admin，密码admin123；设置好以后切记更改密码！</p>
 
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/master/linux-install.sh)
