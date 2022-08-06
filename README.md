@@ -12,6 +12,9 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
+<h2>
+    <p>⚡ 作者开发费用抽水恒定千分之2,纯转发不抽水<p>
+</h2>
 <h3>
     Telegram：<a href="https://t.me/+R5CwxedobOoxZTQ1">https://t.me/+R5CwxedobOoxZTQ1</a> QQ：<a href=2033638252"">2033638252</a>
     <p>Github：https://github.com/tiancao2022/LXMinerProxy<p>
@@ -203,6 +206,14 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 # 更新日志
 
 ```
+3.3.1
+修复了kaspa高无效的问题
+增加了纯转发端口, 功能类似nginx
+增加了份额最后提交日期
+优化了页面细节及主题
+修复了erg一些列的问题
+优化了在线/离线设备数量显示
+
 3.2.1
 重要更新，全面优化管理界面
 优化使用体验
