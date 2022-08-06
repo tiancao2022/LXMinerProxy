@@ -2,7 +2,7 @@
 # Author: tiancao2022
 # github: https://github.com/tiancao2022
 
-VERSION="3.1.1"
+VERSION="3.3.1"
 
 DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/Linux-64"
 
@@ -30,6 +30,7 @@ ISSUE() {
     echo "3.0.1"
     echo "3.1.1"
     echo "3.2.1"
+    echo "3.3.1"
 }
 
 colorEcho(){
@@ -166,7 +167,7 @@ start() {
 update() {
     turn_off
 
-    installapp 3.2.1
+    installapp 3.3.1
 }
 
 turn_on() {
@@ -435,7 +436,7 @@ read -p "$(echo -e "请选择[1-16]：")" choose
 
 case $choose in
 1)
-    installapp 3.2.1
+    installapp 3.3.1
     ;;
 2)
     update
