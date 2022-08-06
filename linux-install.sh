@@ -65,7 +65,7 @@ setConfig() {
 
         chmod -R 777 $PATH_CONFIG
 
-        echo "LX_START_PORT=16777" >> $PATH_CONFIG
+        echo "KT_START_PORT=16777" >> $PATH_CONFIG
     fi
 
     TARGET_VALUE="$1=$2"
@@ -154,8 +154,8 @@ start() {
         # nohup "${PATH_LX}/${PATH_EXEC}" >/dev/null 2>log &
         filterResult $? "启动程序"
 
-        # getConfig "LX_START_PORT"
-        port=$(getConfig "LX_START_PORT")
+        # getConfig "KT_START_PORT"
+        port=$(getConfig "KT_START_PORT")
 
         colorEcho $GREEN "|----------------------------------------------------------------|"
         colorEcho $GREEN "程序启动成功, WEB访问端口${port}, 默认账号admin, 默认密码admin123。"
@@ -295,7 +295,7 @@ installapp() {
     fi
 
     if [[ ! -f $PATH_CONFIG ]];then
-        setConfig LX_START_PORT $((RANDOM%65535+1))
+        setConfig KT_START_PORT $((RANDOM%65535+1))
     fi
 
     colorEcho $BLUE "拉取程序"
@@ -383,7 +383,7 @@ restart() {
 set_port() {
     read -p "$(echo -e "请输入要设置的端口号：")" choose
 
-    setConfig LX_START_PORT $choose
+    setConfig KT_START_PORT $choose
 
     stop
 
@@ -401,7 +401,7 @@ resetpass() {
 }
 
 lookport() {
-    port=$(getConfig "LX_START_PORT")
+    port=$(getConfig "KT_START_PORT")
 
     colorEcho $GREEN "当前WEB访问端口${port}"
 }
