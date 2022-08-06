@@ -189,7 +189,7 @@ turn_on() {
         echo '  if [ $COUNT -ne 0 ]; then' >> $PATH_TURN_ON_SH
         echo '      echo "LXProxy已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
         echo '  elif [ $(id -u) -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "使用ROOT用户登录才能启动LXProxy"' >> $PATH_TURN_ON_SH
+        echo '      echo "使用ROOT用户登录才能启动LXPROXY"' >> $PATH_TURN_ON_SH
         echo '  fi' >> $PATH_TURN_ON_SH
         echo 'fi' >> $PATH_TURN_ON_SH
 
