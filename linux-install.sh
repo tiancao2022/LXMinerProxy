@@ -23,7 +23,7 @@ PATH_ERR="/root/lxmproxy/err.log"
 
 
 PATH_TURN_ON="/etc/profile.d"
-PATH_TURN_ON_SH="/etc/profile.d/LXm.sh"
+PATH_TURN_ON_SH="/etc/profile.d/lxm.sh"
 
 ISSUE() {
     echo "2.7.1"
@@ -65,7 +65,7 @@ setConfig() {
 
         chmod -R 777 $PATH_CONFIG
 
-        echo "KT_START_PORT=16777" >> $PATH_CONFIG
+        echo "LX_START_PORT=16777" >> $PATH_CONFIG
     fi
 
     TARGET_VALUE="$1=$2"
@@ -154,8 +154,8 @@ start() {
         # nohup "${PATH_LX}/${PATH_EXEC}" >/dev/null 2>log &
         filterResult $? "启动程序"
 
-        # getConfig "KT_START_PORT"
-        port=$(getConfig "KT_START_PORT")
+        # getConfig "LX_START_PORT"
+        port=$(getConfig "LX_START_PORT")
 
         colorEcho $GREEN "|----------------------------------------------------------------|"
         colorEcho $GREEN "程序启动成功, WEB访问端口${port}, 默认账号admin, 默认密码admin123。"
@@ -184,12 +184,12 @@ turn_on() {
         echo 'if [ $COUNT -eq 0 ] && [ $(id -u) -eq 0 ]; then' >> $PATH_TURN_ON_SH
         echo "  cd ${PATH_LX}" >> $PATH_TURN_ON_SH
         echo "  nohup "${PATH_LX}/${PATH_EXEC}" 2>err.log &" >> $PATH_TURN_ON_SH
-        echo '  echo "lxproxy已启动"' >> $PATH_TURN_ON_SH
+        echo '  echo "LXProxy已启动"' >> $PATH_TURN_ON_SH
         echo 'else' >> $PATH_TURN_ON_SH
         echo '  if [ $COUNT -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "lxproxy已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
+        echo '      echo "LXProxy已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
         echo '  elif [ $(id -u) -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "使用ROOT用户登录才能启动lxproxy"' >> $PATH_TURN_ON_SH
+        echo '      echo "使用ROOT用户登录才能启动LXProxy"' >> $PATH_TURN_ON_SH
         echo '  fi' >> $PATH_TURN_ON_SH
         echo 'fi' >> $PATH_TURN_ON_SH
 
@@ -209,7 +209,7 @@ installapp() {
         VERSION="$1"
     fi
     
-    colorEcho ${GREEN} "开始安装lxproxy-V-${VERSION}"
+    colorEcho ${GREEN} "开始安装LXPROXY-V-${VERSION}"
 
     if [[ `command -v yum` ]];then
         colorEcho ${BLUE} "关闭防火墙"
@@ -295,7 +295,7 @@ installapp() {
     fi
 
     if [[ ! -f $PATH_CONFIG ]];then
-        setConfig KT_START_PORT $((RANDOM%65535+1))
+        setConfig LX_START_PORT $((RANDOM%65535+1))
     fi
 
     colorEcho $BLUE "拉取程序"
@@ -356,12 +356,12 @@ check_limit() {
 check_hub() {
     # cd $PATH_LX
     colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/LXmproxy/nohup.out
+    tail -f /root/lxmproxy/nohup.out
 }
 
 check_err() {
     colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/LXmproxy/err.log
+    tail -f /root/lxmproxy/err.log
 }
 
 install_target() {
@@ -383,7 +383,7 @@ restart() {
 set_port() {
     read -p "$(echo -e "请输入要设置的端口号：")" choose
 
-    setConfig KT_START_PORT $choose
+    setConfig LX_START_PORT $choose
 
     stop
 
@@ -401,7 +401,7 @@ resetpass() {
 }
 
 lookport() {
-    port=$(getConfig "KT_START_PORT")
+    port=$(getConfig "LX_START_PORT")
 
     colorEcho $GREEN "当前WEB访问端口${port}"
 }
