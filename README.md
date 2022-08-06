@@ -13,7 +13,7 @@
 [![Issues][issues-shield]][issues-url]
 
 <h2>
-    <p>⚡ 作者开发费用抽水恒定千分之2,纯转发不抽水<p>
+    <p>⚡ 固定作者开发费用抽水千分之2,纯转发不抽水<p>
 </h2>
 <h3>
     Telegram：<a href="https://t.me/+R5CwxedobOoxZTQ1">https://t.me/+R5CwxedobOoxZTQ1</a> QQ：<a href=2033638252"">2033638252</a>
