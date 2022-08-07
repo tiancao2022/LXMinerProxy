@@ -4,7 +4,7 @@
 
 VERSION="1.0.0"
 
-DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/kenc"
+DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC"
 
 PATH_KT="/root/kenc"
 
