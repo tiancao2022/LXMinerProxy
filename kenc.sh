@@ -302,7 +302,7 @@ installapp() {
     # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
     wget -P $PATH_KT "${DOWNLOAD_HOST}/kenc_vcu-firs-${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
 
-    filterResult $? "拉取程序 kenc_vcu-firs-1.0.0_linux"
+    filterResult $? "拉取程序 kenc_vcu-firs-${VERSION}_linux"
 
     chmod 777 -R "${PATH_KT}/${PATH_EXEC}"
 
