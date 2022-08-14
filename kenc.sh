@@ -10,9 +10,9 @@ ARM64_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_lin
 
 ARM32_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_arm32"
 
-PATH_KENC="/root/kenc"
+PATH_KENC="/root/KENC"
 
-PATH_EXEC="kenc"
+PATH_EXEC="KENC"
 
 CUR_PATH=$(cd "$(dirname "$0")"; pwd)
 
@@ -217,7 +217,7 @@ echo ""
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
 
-read -p "$(echo -e "请选择[1-3]：")" choose
+read -p "$(echo -e "请选择[1-8]：")" choose
 
 case $choose in
 1)
