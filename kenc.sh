@@ -4,15 +4,15 @@
 
 DOWNLOAD_HOST=""
 
-AMD_HOST="https://cdn.jsdelivr.net/gh/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_amd64"
+AMD64_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_amd64"
 
-ARM64_HOST="https://cdn.jsdelivr.net/gh/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_arm64"
+ARM64_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_arm64"
 
-ARM32_HOST="https://cdn.jsdelivr.net/gh/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_arm32"
+ARM32_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_arm32"
 
-PATH_KENC="/root/KENC"
+PATH_KENC="/root/kenc"
 
-PATH_EXEC="KENC"
+PATH_EXEC="kenc"
 
 CUR_PATH=$(cd "$(dirname "$0")"; pwd)
 
