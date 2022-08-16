@@ -2,7 +2,7 @@
 # Author: LX007
 # github: https://github.com/tiancao2022/LXMinerProxy
 
-DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/Linux-64"
+DOWNLOAD_HOST=""
 
 AMD64_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/KENC/kenc_linux_amd64"
 
