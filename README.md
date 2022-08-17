@@ -206,6 +206,9 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 # 更新日志
 
 ```
+3.4.1
+加强账号安全登录机制, 密码加密不可逆，更新完记得修改【账号】和【密码】
+
 3.3.1
 修复了kaspa高无效的问题
 增加了纯转发端口, 功能类似nginx
