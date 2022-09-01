@@ -200,12 +200,27 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 - BEAM
 - ALPH
 - KASPA
+-NEOX
+-FLUX
+-LBC
+-HNS
 - ...
 
 <span id="uplog"></span>
 # 更新日志
 
 ```
+3.6.1
+修复了特定环境下算力曲线显示不正常
+支持了FLUX（无损模式-建议gminer）
+支持了LBC(兼容模式)
+支持了HNS(兼容模式)
+支持了NEOX币种
+增加了芯片机的内核或机型的显示
+
+3.5.1
+修复了部分小币种导致软件崩溃的BUG
+
 3.4.1
 加强账号安全登录机制, 密码加密不可逆，更新完记得修改【账号】和【密码】
 
