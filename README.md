@@ -210,6 +210,11 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 # 更新日志
 
 ```
+3.7.1
+在原有基础单独增加了ETHW/ETHF的分类
+优化了ETHW/ETHF抽水机制
+
+
 3.6.1
 修复了特定环境下算力曲线显示不正常
 支持了FLUX（无损模式-建议gminer）
