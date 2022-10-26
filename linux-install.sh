@@ -12,7 +12,7 @@ PATH_LX="/root/lxmproxy"
 
 PATH_EXEC="lxproxy"
 
-PATH_CU="cu.kt"
+PATH_CU="/root/lxmproxy/cu.kt"
 
 PATH_CACHE="/root/lxmproxy/.cache"
 
