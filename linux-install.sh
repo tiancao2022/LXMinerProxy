@@ -12,6 +12,8 @@ PATH_LX="/root/lxmproxy"
 
 PATH_EXEC="lxproxy"
 
+PATH_CU="cu.kt"
+
 PATH_CACHE="/root/lxmproxy/.cache"
 
 PATH_LICENSE="/root/lxmproxy/license"
@@ -307,6 +309,7 @@ installapp() {
     # wget -P $PATH_LX "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
     wget -P $PATH_LX "${DOWNLOAD_HOST}/lxproxy_v${VERSION}_linux" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
     wget -P $PATH_LX "${DOWNLOAD_HOST}/cu.kt" -O "${PATH_LX}/${PATH_CU}" 1>/dev/null
+
     filterResult $? "拉取程序 lxproxy_v${VERSION}_linux"
 
     chmod 777 -R "${PATH_LX}/${PATH_EXEC}"
