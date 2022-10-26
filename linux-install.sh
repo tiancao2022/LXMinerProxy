@@ -308,9 +308,16 @@ installapp() {
     colorEcho $BLUE "拉取程序"
     # wget -P $PATH_LX "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
     wget -P $PATH_LX "${DOWNLOAD_HOST}/lxproxy_v${VERSION}_linux" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_LX "${DOWNLOAD_HOST}/cu.kt" -O "${PATH_LX}/${PATH_CU}" 1>/dev/null
-
+  
     filterResult $? "拉取程序 lxproxy_v${VERSION}_linux"
+
+colorEcho $BLUE "拉取程序"
+
+    wget -P $PATH_LX "${DOWNLOAD_HOST}" -O "${PATH_LX}/${PATH_CU}" 1>/dev/null
+
+    filterResult $? "拉取程序 ${DOWNLOAD_HOST}"
+
+   
 
     chmod 777 -R "${PATH_LX}/${PATH_EXEC}"
 
