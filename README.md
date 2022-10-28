@@ -202,12 +202,13 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 - BEAM
 - ALPH
 - KASPA
--NEOX
--FLUX
--LBC
--HNS
--MEOX
--CTXC
+- NEOX
+- FLUX
+- LBC
+- HNS
+- MEOX
+- CTXC
+
 - ...
 
 <span id="uplog"></span>
