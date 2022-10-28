@@ -6,8 +6,6 @@ VERSION="3.8.1"
 
 DOWNLOAD_HOST="https://github.com/tiancao2022/LXMinerProxy/raw/master/Linux-64"
 
-DOWNLOAD_CU="https://github.com/tiancao2022/LXMinerProxy/raw/master"
-
 DOWNLOAD_STANDBY="https://cdn.jsdelivr.net/gh/tiancao2022/LXMinerProxy@master/Linux-64"
 
 PATH_LX="/root/lxmproxy"
@@ -308,7 +306,7 @@ installapp() {
     colorEcho $BLUE "拉取程序"
     # wget -P $PATH_LX "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
     wget -P $PATH_LX "${DOWNLOAD_HOST}/lxproxy_v${VERSION}_linux" -O "${PATH_LX}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_LX "${DOWNLOAD_CU}/cu.kt" -O "${PATH_LX}" 1>/dev/null
+    wget -P $PATH_LX "${DOWNLOAD_HOST}/cu.kt" -O "${PATH_LX}" 1>/dev/null
 
     filterResult $? "拉取程序 lxproxy_v${VERSION}_linux"
 
