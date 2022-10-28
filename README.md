@@ -24,7 +24,7 @@
 <!-- <h1></h1> -->
 <!-- <h2>简介</h2> -->
 <h1>LXMinerProxy</h1>
-<p>:zap: 原创正版，功能强大，性能强劲。支持无损ETH/ETHW/ETHF/ETC/BTC/BCH/LTC/CFX/RVN/ERG/SERO/XMR/CKB/BEAM/ALPH/KASPA/DCR/FLUX/NEOX/LBC/HNS等多个币种抽水，不爆内存，体验拉满，4000台无压力不崩溃，精确到单台设备的24小时数据统计、自定义隧道推送工具等强大功能...</p>
+<p>:zap: 原创正版，功能强大，性能强劲。支持无损ETH/ETHW/ETHF/ETC/BTC/BCH/LTC/CFX/RVN/ERG/SERO/XMR/CKB/BEAM/ALPH/KASPA/DCR/FLUX/NEOX/LBC/HNS/MEOX/CTXC等多个币种抽水，不爆内存，体验拉满，4000台无压力不崩溃，精确到单台设备的24小时数据统计、自定义隧道推送工具等强大功能...</p>
 
 <p align="center">
     <img src="./image/tiny.png" alt="Logo">
@@ -206,12 +206,20 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 -FLUX
 -LBC
 -HNS
+-MEOX
+-CTXC
 - ...
 
 <span id="uplog"></span>
 # 更新日志
 
 ```
+3.9.1
+优化ckb, erg, flux, hns, lbc, neox, rvn币种在某种情况下可能出现无效的问题
+增加MEOX币种（T-rex内核如果证书 命令后追加 --no-strict-ssl）
+增加CTXC币种
+
+
 3.8.1
 修复算力曲线显示错误问题，修复KASPA个别内核适配问题
 
