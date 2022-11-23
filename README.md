@@ -215,6 +215,10 @@ bash <(curl -s -L https://raw.githubusercontent.com/tiancao2022/LXMinerProxy/mas
 # 更新日志
 
 ```
+3.9.2
+重要性能优化，修复了机器链接会不定时会断开的bug，建议全部更新。
+
+
 3.9.1
 优化ckb, erg, flux, hns, lbc, neox, rvn币种在某种情况下可能出现无效的问题
 增加MEOX币种（T-rex内核如果证书 命令后追加 --no-strict-ssl）
